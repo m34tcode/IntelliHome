@@ -1,0 +1,17 @@
+TODO:
+
+Rewrite manual func to generate IDs for transactions and transmissions separately
+
+allow for longer length transmissions
+*Create a permission to send system if NRFs dont communicate reliably.
+    ^NRFs must send a permission to transmit request to server before transmitting. If server does not acknowledge and allow, it waits to send and maybe asks again until server allows it
+    ^no longer necessary. Reliable communication attained
+
+create an expected response object when we are expecting a response from a module before performing some action(like waiting for an init OK ex. "BEGIN,1", from a module
+  Places to implement:
+    -Module Ack before init
+    -Module init
+  ^Unnecessary
+
+Tranmission object needs a RETRY ID which can be appended. EX 'A' , 'B' , 'C' , etc...
+  ^ WHY? --Delayed until necessary
